@@ -1,66 +1,65 @@
 import {Hono} from 'hono'
 import {ssgParams} from 'hono/ssg'
 import {jsxRenderer} from 'hono/jsx-renderer'
+import {Layout} from './pages/layout'
+import {HomePage} from "./pages/home";
+import {AboutPage} from "./pages/about";
+import {EventsPage} from "./pages/events";
+import {LocationPage} from "./pages/location";
+import {NewsPage} from "./pages/news";
 
 const app = new Hono()
 
 app.all(
   '*',
-  jsxRenderer(({children}) => {
-    return (
-      <html>
-      <link href="/static/style.css" rel="stylesheet"/>
-      <body>
-        <header>
-          <a href="/">top</a> &nbsp;
-          <a href="/foo">foo</a> &nbsp;
-          <a href="/posts">posts</a>
-        </header>
-        <main>{children}</main>
-      </body>
-      </html>
-    )
-  })
+  jsxRenderer(({children}) => <Layout>{children}</Layout>, {docType: '<!DOCTYPE html>'})
 )
 
-app.get('/', (c) => {
-  return c.render(<h1>Hello Hono🔥</h1>)
-})
+app.get('/', (c) =>
+  c.render(<HomePage />))
 
-app.get('/foo', (c) => {
-  return c.render(<h1>Foo</h1>)
-})
+app.get('/about', (c) =>
+  c.render(<AboutPage />))
 
-type Post = {
-  id: string
-}
+app.get('/events', (c) =>
+  c.render(<EventsPage />))
 
-const posts: Post[] = [{id: 'hello'}, {id: 'morning'}, {id: 'night'}]
+app.get('/location', (c) => c.render(
+  <LocationPage />))
 
-app.get('/posts', (c) => {
-  return c.render(
-    <ul>
-      {posts.map((post) => {
-        return (
-          <li>
-            <a href={`/posts/${post.id}`}>{post.id}</a>
-          </li>
-        )
-      })}
-    </ul>
-  )
-})
+app.get('/news', (c) =>
+  c.render(<NewsPage />))
 
-app.get(
-  '/posts/:id',
-  ssgParams(() => posts),
-  (c) => {
-    return c.render(<h1>{c.req.param('id')}</h1>)
-  }
-)
-
-app.get('/status', ssgParams(false), (c) => c.json({ok: true}))
-
-app.get('/404', (c) => c.notFound())
+// type Post = {
+//   id: string
+// }
+//
+// const posts: Post[] = [{id: 'hello'}, {id: 'morning'}, {id: 'night'}]
+//
+// app.get('/posts', (c) => {
+//   return c.render(
+//     <ul>
+//       {posts.map((post) => {
+//         return (
+//           <li>
+//             <a href={`/posts/${post.id}`}>{post.id}</a>
+//           </li>
+//         )
+//       })}
+//     </ul>
+//   )
+// })
+//
+// app.get(
+//   '/posts/:id',
+//   ssgParams(() => posts),
+//   (c) => {
+//     return c.render(<h1>{c.req.param('id')}</h1>)
+//   }
+// )
+//
+// app.get('/status', ssgParams(false), (c) => c.json({ok: true}))
+//
+// app.get('/404', (c) => c.notFound())
 
 export default app
