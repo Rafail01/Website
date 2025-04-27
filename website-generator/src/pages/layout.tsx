@@ -25,7 +25,10 @@ export const Layout: FC = ({children}) => {
     </section>
     <section class="section-footer">
       <div className="social-icons">
-        <div>thlefwno: 6944982331</div>
+        <div>
+          <i className="fas fa-phone" style="font-size: 30px; color: black;"></i>
+          <a href="tel:6944982331" style="text-decoration: none; color: black; margin-left: 10px;">6944982331</a>
+        </div>
         <div>
           <a href="https://www.facebook.com/dim.manimanis" target="_blank">
             <i className="fab fa-facebook-square" style="font-size: 50px;color: black;"></i>
@@ -36,7 +39,11 @@ export const Layout: FC = ({children}) => {
             <i className="fab fa-instagram" style="font-size: 50px;color: black;"></i>
           </a>
         </div>
-        <div>email: leukippos.h.o.manis@gmail.com</div>
+        <div>
+          <i className="fas fa-envelope" style="font-size: 30px; color: black;"></i>
+          <a href="mailto:leukippos.h.o.manis@gmail.com" target="_blank"
+             style="text-decoration: none; color: black; margin-left: 10px;">leukippos.h.o.manis@gmail.com</a>
+        </div>
       </div>
     </section>
     </body>
