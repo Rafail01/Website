@@ -1,98 +1,95 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: Century;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Century, serif;
 }
 
-header{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(BackGroundImage.png) ;
-    height: 100vh;
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/background-image.png);
     background-size: cover;
     background-position: center;
-    min-height: 100px;
+    background-repeat: no-repeat;
+    height: 100lvh;
 }
 
-ul{
-    float: right;
+.container {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.navbar ul {
     list-style-type: none;
-    margin-top: 30px;
-    max-height: 400px;
-    margin-right: 60px;
-    font-size: 17px;
+    font-size: 1rem;
 }
 
-ul li{
+.navbar ul li {
     display: inline-block;
+    padding: 1rem 0.6rem;
 }
 
-ul li a{
+.navbar ul li a {
     text-decoration: none;
     color: #fff;
     padding: 5px 20px;
     border: 1px solid transparent;
-    transition: 0.5 ease;
+    transition: 0.5s ease;
 }
 
-ul li a:hover{
+.navbar ul li a:hover {
     background-color: #fff;
     color: #000;
 }
 
-ul li.active a{
+.navbar ul li.active a {
     background-color: #fff;
     color: #000;
 }
 
-.logo img{
+.logo img {
     float: left;
     width: 150px;
     height: auto;
 }
 
-.main{
-    width: 60%;
-    margin: auto;
+section.section-content {
+    width: 100%;
+    height: 85lvh;
+    display: flex;
+    overflow: scroll;
 }
 
-.container{
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color:aliceblue;
-    margin: 0;
-    padding: 0;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    max-height: 80%;
+section.section-footer {
+    width: 100%;
+    height: 5lvh;
+    display: flex;
 }
 
-.container h1{
+h1 {
     color: burlywood;
     font-size: 70px;
     text-align: center;
     min-width: 650px;
 }
 
-.p1 p{
-    color:aliceblue;
+.p1 p {
+    color: aliceblue;
     padding: 1.5%;
-    font-size:large;
+    font-size: large;
 }
 
-.p2 p{
-    color:aliceblue;
+.p2 p {
+    color: aliceblue;
     padding: 1%;
     font-size: large;
 }
 
-.list{
+.list {
     font-size: large;
     padding: 2%;
-    color:aliceblue;
+    color: aliceblue;
 }
 
-.list p{
+.list p {
     color: aliceblue;
     padding: 1.5;
     font-size: large;
@@ -103,11 +100,13 @@ ul li.active a{
     margin-top: 20px;
 }
 
-.social-icons{
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    padding: 2;
+.social-icons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
 }
 
 .map-container {
