@@ -5,8 +5,22 @@ export const Layout: FC = ({children}) => {
     <html lang="en">
     <head>
       <title>Leukipos</title>
+      <link rel="icon" type="image/jpeg" href="/static/img/logo_final.jpg" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
       <link rel="stylesheet" href="static/style.css"/>
+      <link
+          rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      />
+      <script
+          src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          defer
+      ></script>
+      <script
+          src="static/js/location.js"
+          defer
+      ></script>
+
     </head>
     <body>
     <header>
@@ -28,6 +42,7 @@ export const Layout: FC = ({children}) => {
         <div>
           <i className="fas fa-phone" style="font-size: 30px; color: black;"></i>
           <a href="tel:6944982331" style="text-decoration: none; color: black; margin-left: 10px;">6944982331</a>
+          <a href="tel:6947144443" style="text-decoration: none; color: black; margin-left: 10px;">6947144443</a>
         </div>
         <div>
           <a href="https://www.facebook.com/dim.manimanis" target="_blank">
