@@ -8,6 +8,7 @@
   "dependencies": {
     "hono": "4.7.7",
     "leaflet": "^1.9.4",
+    "lightgallery": "^2.8.3",
     "react-leaflet": "^5.0.0"
   },
   "devDependencies": {
