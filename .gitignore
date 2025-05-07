@@ -3,7 +3,7 @@
 node_modules
 .hono
 .wrangler
-dist
+#dist
 yarn-error.log
 yarn.lock
 
