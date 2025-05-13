@@ -7,7 +7,8 @@ import {AboutPage} from "./pages/about";
 import {EventsPage} from "./pages/events";
 import {LocationPage} from "./pages/location";
 import {NewsPage} from "./pages/news";
-import AnnouncementDetail, {getStaticPaths} from "./pages/news/[id]";
+import AnnouncementDetail from "./pages/news/[id]";
+import {announcements} from "./data/announcements";
 
 const app = new Hono()
 
@@ -31,11 +32,14 @@ app.get('/location', (c) => c.render(
 app.get('/news', (c) =>
   c.render(<NewsPage />))
 
-getStaticPaths().forEach(({ id }) => {
-    app.get(`/news/${id}`, (c) => {
-        return c.html(<AnnouncementDetail id={id} />);
-    });
-});
+app.get('/news/:id', (c) => {
+    const id = c.req.param('id')
+    const announcement = announcements.find((a) => a.id === id)
+    if (!announcement) {
+        return c.notFound()
+    }
+    return c.render(<AnnouncementDetail id={id} />)
+})
 
 
 // type Post = {
