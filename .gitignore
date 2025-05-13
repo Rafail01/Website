@@ -1,7 +1,7 @@
 .idea
 .qodo
 node_modules
-.hono
+#.hono
 .wrangler
 #dist
 yarn-error.log
