@@ -18,7 +18,11 @@ export default function AnnouncementDetail({ id }: Props) {
             <small>{announcement.date}</small>
             <div className="p1">
                 {announcement.fullContent.map((paragraph, index) => (
-                    <p key={index} style={{ marginTop: '1rem' }}>{paragraph}</p>
+                    (index ===3 || index==6) ? (
+                        <p key={index} style={{ marginTop: '1rem', color:"burlywood" }}><strong>{paragraph}</strong></p>
+                    ) : (
+                        <p key={index} style={{ marginTop: '1rem' }}>{paragraph}</p>
+                    )
                 ))}
             </div>
         </>
