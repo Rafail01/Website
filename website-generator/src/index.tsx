@@ -18,6 +18,9 @@ app.all(
 app.get('/', (c) =>
   c.render(<HomePage />))
 
+app.get('/home', (c) =>
+    c.render(<HomePage />))
+
 app.get('/about', (c) =>
   c.render(<AboutPage />))
 

@@ -1,43 +1,33 @@
-import { FC, useEffect, useRef } from 'hono/jsx';
-import lightGallery from 'lightgallery';
-
-// Plugins
-import lgThumbnail from 'lightgallery/plugins/thumbnail';
-import lgZoom from 'lightgallery/plugins/zoom';
-
-// CSS
-import 'lightgallery/css/lightgallery.css';
-import 'lightgallery/css/lg-thumbnail.css';
-import 'lightgallery/css/lg-zoom.css';
+import { FC } from 'hono/jsx';
 
 export const AboutPage: FC = () => {
-    const galleryRef = useRef(null);
-
-    useEffect(() => {
-        if (galleryRef.current) {
-            lightGallery(galleryRef.current, {
-                plugins: [lgThumbnail, lgZoom],
-                speed: 500,
-                selector: 'a', // targets <a> children inside .photo-gallery
-            });
-        }
-    }, []);
-
     const images = [
-        "/static/img/images_videos/kalamata/kalamata1.jpg",
-        "/static/img/images_videos/kalamata/kalamata2.jpg",
-        "/static/img/images_videos/kalamata/kalamata3.jpg",
-        "/static/img/images_videos/kalamata/kalamata4.jpg",
-        "/static/img/images_videos/kalamata/kalamata5.jpg",
-        "/static/img/images_videos/kalamata/kalamata6.jpg",
-        "/static/img/images_videos/kalamata/kalamata7.jpg",
-        "/static/img/images_videos/kalamata/kalamata8.jpg",
-        "/static/img/images_videos/kalamata/kalamata9.jpg",
-        "/static/img/images_videos/mani/mani1.jpg",
-        "/static/img/images_videos/mani/mani2.jpg",
-        "/static/img/images_videos/mani/mani3.jpg",
-        "/static/img/images_videos/mani/mani4.jpg",
-        "/static/img/images_videos/mani/mani5.jpg",
+        "static/img/images_videos/kalamata/kalamata1.jpg",
+        "static/img/images_videos/kalamata/kalamata2.jpg",
+        "static/img/images_videos/kalamata/kalamata3.jpg",
+        "static/img/images_videos/kalamata/kalamata4.jpg",
+        "static/img/images_videos/kalamata/kalamata5.jpg",
+        "static/img/images_videos/kalamata/kalamata6.jpg",
+        "static/img/images_videos/kalamata/kalamata7.jpg",
+        "static/img/images_videos/kalamata/kalamata8.jpg",
+        "static/img/images_videos/kalamata/kalamata9.jpg",
+        "static/img/images_videos/mani/mani1.jpg",
+        "static/img/images_videos/mani/mani2.jpg",
+        "static/img/images_videos/mani/mani3.jpg",
+        "static/img/images_videos/mani/mani4.jpg",
+        "static/img/images_videos/mani/mani5.jpg",
+    ];
+
+    const videos = [
+        "static/img/images_videos/videos/videoEvent1.mp4",
+        "static/img/images_videos/videos/videoEvent2.mp4",
+        "static/img/images_videos/videos/videoEvent3.mp4",
+        "static/img/images_videos/videos/videoEvent4.mp4",
+        "static/img/images_videos/videos/videoEvent5.mp4",
+        "static/img/images_videos/videos/videoEvent6.mp4",
+        "static/img/images_videos/videos/videoEvent7.mp4",
+        "static/img/images_videos/videos/videoEvent8.mp4",
+        "static/img/images_videos/videos/videoEvent9.mp4",
     ];
 
     return (
@@ -60,21 +50,23 @@ export const AboutPage: FC = () => {
                 </ul>
             </div>
 
-            <div className="p1">
-                <h1>Τμήματα & Μαθήματα</h1>
-                <p>
-                    Λειτουργούν τμήματα παιδικά και ενηλίκων για αρχάριους αλλά και πιο έμπειρους χορευτές.
-                    Διδάσκονται παραδοσιακοί χοροί από όλη την Ελλάδα, λαϊκοί χοροί, κρητικοί χοροί, και με δυνατότητα ιδιαίτερων μαθημάτων.
-                    Στο σύλλογο λειτουργεί και ερασιτεχνική θεατρική ομάδα.
-                </p>
-            </div>
-
-            <div className="photo-gallery" ref={galleryRef}>
+            <div className="photo-gallery" id="lightgallery">
                 {images.map((src, index) => (
                     <a key={index} href={src}>
                         <img
                             src={src}
-                            alt={`Φωτογραφία ${index + 1}`}
+                            // alt={` ${index + 1}`}
+                            style={{ width: "200px", margin: "5px" }}
+                        />
+                    </a>
+                ))}
+            </div>
+            <div className="photo-gallery" id="lightgallery">
+                {videos.map((src, index) => (
+                    <a key={index} href={src}>
+                        <video
+                            src={src}
+                            // alt={` ${index + 1}`}
                             style={{ width: "200px", margin: "5px" }}
                         />
                     </a>
