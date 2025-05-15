@@ -43,10 +43,10 @@ export const Layout: FC = ({children}) => {
           </ul>
         </div>
       </header>
-      <section class="section-content">
-        <div class="content container">{children}</div>
+      <section className="section-content">
+        <div className="content container">{children}</div>
       </section>
-      <section class="section-footer">
+      <section className="section-footer">
         <div className="social-icons">
           <div>
             <i className="fas fa-phone" style="font-size: 30px; color: black;"></i>
