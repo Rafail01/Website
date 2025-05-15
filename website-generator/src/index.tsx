@@ -8,7 +8,7 @@ import {EventsPage} from "./pages/events";
 import {LocationPage} from "./pages/location";
 import {NewsPage} from "./pages/news";
 import AnnouncementDetail from "./pages/news/[id]";
-import {announcements} from "./data/announcements";
+import {announcements} from "../public/static/data/announcements";
 
 const app = new Hono()
 

@@ -1,4 +1,4 @@
-import { announcements } from '../data/announcements';
+import { announcements } from '../../public/static/data/announcements';
 
 
 export const NewsPage = () => (

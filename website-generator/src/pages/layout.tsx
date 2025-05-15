@@ -5,9 +5,9 @@ export const Layout: FC = ({children}) => {
       <html lang="en">
       <head>
         <title>Leukipos</title>
-        <link rel="icon" type="image/jpeg" href="static/img/logo_final.jpg" />
+        <link rel="icon" type="image/jpeg" href="/static/img/logo_final.jpg" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-        <link rel="stylesheet" href="static/style.css"/>
+        <link rel="stylesheet" href="/static/style.css"/>
         <link
             rel="stylesheet"
             href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -35,7 +35,7 @@ export const Layout: FC = ({children}) => {
       <header>
         <div className="navbar container">
           <ul>
-            <li><a href="/">Home</a></li>
+            <li><a href="/home">Home</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/events">Events</a></li>
             <li><a href="/location">Location</a></li>
