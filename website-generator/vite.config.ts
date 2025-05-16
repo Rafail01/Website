@@ -6,7 +6,7 @@ const entry = './src/index.tsx'
 
 export default defineConfig(() => {
   return {
-    base: 'Website/', // ✅ Προσθήκη αυτής της γραμμής
+    base: './', // ✅ Προσθήκη αυτής της γραμμής
     plugins: [devServer({ entry }), ssg({ entry })],
     build: {
       outDir: 'dist',
