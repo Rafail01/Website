@@ -35,11 +35,11 @@ export const Layout: FC = ({children}) => {
       <header>
         <div className="navbar container">
           <ul>
-            <li><a href="/home">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/events">Events</a></li>
-            <li><a href="/location">Location</a></li>
-            <li><a href="/news">News</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="news.html">News</a></li>
           </ul>
         </div>
       </header>
