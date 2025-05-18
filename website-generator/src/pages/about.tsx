@@ -18,17 +18,17 @@ export const AboutPage: FC = () => {
         "static/img/images_videos/mani/mani5.jpg",
     ];
 
-    const videos = [
-        "static/img/images_videos/videos/videoEvent1.mp4",
-        "static/img/images_videos/videos/videoEvent2.mp4",
-        "static/img/images_videos/videos/videoEvent3.mp4",
-        "static/img/images_videos/videos/videoEvent4.mp4",
-        "static/img/images_videos/videos/videoEvent5.mp4",
-        "static/img/images_videos/videos/videoEvent6.mp4",
-        "static/img/images_videos/videos/videoEvent7.mp4",
-        "static/img/images_videos/videos/videoEvent8.mp4",
-        "static/img/images_videos/videos/videoEvent9.mp4",
-    ];
+    // const videos = [
+    //     "static/img/images_videos/videos/videoEvent1.mp4",
+    //     "static/img/images_videos/videos/videoEvent2.mp4",
+    //     "static/img/images_videos/videos/videoEvent3.mp4",
+    //     "static/img/images_videos/videos/videoEvent4.mp4",
+    //     "static/img/images_videos/videos/videoEvent5.mp4",
+    //     "static/img/images_videos/videos/videoEvent6.mp4",
+    //     "static/img/images_videos/videos/videoEvent7.mp4",
+    //     "static/img/images_videos/videos/videoEvent8.mp4",
+    //     "static/img/images_videos/videos/videoEvent9.mp4",
+    // ];
 
     return (
         <>
@@ -61,17 +61,17 @@ export const AboutPage: FC = () => {
                     </a>
                 ))}
             </div>
-            <div className="photo-gallery" id="lightgallery">
-                {videos.map((src, index) => (
-                    <a key={index} href={src}>
-                        <video
-                            src={src}
-                            // alt={` ${index + 1}`}
-                            style={{ width: "200px", margin: "5px" }}
-                        />
-                    </a>
-                ))}
-            </div>
+            {/*<div className="photo-gallery" id="lightgallery">*/}
+            {/*    {videos.map((src, index) => (*/}
+            {/*        <a key={index} href={src}>*/}
+            {/*            <video*/}
+            {/*                src={src}*/}
+            {/*                // alt={` ${index + 1}`}*/}
+            {/*                style={{ width: "200px", margin: "5px" }}*/}
+            {/*            />*/}
+            {/*        </a>*/}
+            {/*    ))}*/}
+            {/*</div>*/}
         </>
     );
 };
