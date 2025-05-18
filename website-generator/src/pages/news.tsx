@@ -21,8 +21,10 @@ export const NewsPage = () => (
                     }}
                 >
                     <h3>{title}</h3>
-                    <small style={{ color: '#888' }}>{date}</small>
-                    <p style={{ marginTop: '0.5rem' }}>{content}</p>
+                    <small>{date}</small>
+                    {content.map((paragraph,index)=>(
+                        <p key={index} style={{ marginTop: '0.5rem' }}>{paragraph}</p>
+                    ))}
                 </a>
             ))}
         </div>
