@@ -12,12 +12,12 @@ export const NewsPage = () => (
                     style={{
                         display: 'block',
                         textDecoration: 'none',
-                        color: 'inherit',
+                        color: "aliceblue",
                         border: '1px solid #ddd',
                         borderRadius: '8px',
                         padding: '1rem',
                         boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
-                        backgroundColor: 'white',
+                        // backgroundColor: 'white',
                     }}
                 >
                     <h3>{title}</h3>
