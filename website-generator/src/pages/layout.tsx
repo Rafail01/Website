@@ -4,7 +4,8 @@ export const Layout: FC = ({children}) => {
   return (
       <html lang="en">
       <head>
-        <title>Leukipos</title>
+        <title>Λεύκιππος Χορευτικός Όμιλος</title>
+        <meta name="keywords" content="Leukipos,Λεύκιππος Χορευτικός Όμιλος,χορός,"/>
         <link rel="icon" type="image/jpeg" href="/static/img/logo_final.jpg" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
         <link rel="stylesheet" href="/static/style.css"/>
