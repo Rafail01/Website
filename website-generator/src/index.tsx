@@ -7,7 +7,7 @@ import { AboutPage } from "./pages/about"
 import { EventsPage } from "./pages/events"
 import { LocationPage } from "./pages/location"
 import { NewsPage } from "./pages/news"
-import AnnouncementDetail from "./pages/news/[id]"
+import AnnouncementDetail from "./pages/[id]"
 import { announcements } from '../public/static/data/announcements'
 
 const app = new Hono()
@@ -23,7 +23,7 @@ app.get('/events', (c) => c.render(<EventsPage />))
 app.get('/location', (c) => c.render(<LocationPage />))
 app.get('/news', (c) => c.render(<NewsPage />))
 
-app.get('/news/:id',
+app.get('/:id',
     ssgParams(() => announcements.map((a) => ({ id: a.id }))),
     (c) => {
         const id = c.req.param('id')

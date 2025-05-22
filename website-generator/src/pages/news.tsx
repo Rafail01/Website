@@ -8,7 +8,7 @@ export const NewsPage = () => (
             {announcements.map(({ id, title, date, content }) => (
                 <a
                     key={id}
-                    // href={`news/${id}.html`}
+                    href={`${id}.html`}
                     style={{
                         display: 'block',
                         textDecoration: 'none',
