@@ -65,9 +65,10 @@ export const Layout: FC = ({children}) => {
             </a>
           </div>
           <div>
-            <i className="fas fa-envelope" style="font-size: 30px; color: black;"></i>
             <a href="mailto:leukippos.h.o.manis@gmail.com" target="_blank"
-               style="text-decoration: none; color: black; margin-left: 10px;">leukippos.h.o.manis@gmail.com</a>
+               style="text-decoration: none; color: black; margin-left: 10px;">
+              <i className="fas fa-envelope" style="font-size: 50px; color: black;"></i>
+            </a>
           </div>
         </div>
       </section>
