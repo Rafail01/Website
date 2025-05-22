@@ -1,4 +1,4 @@
-import { announcements } from '../../../public/static/data/announcements';
+import { announcements } from '../../public/static/data/announcements';
 
 type Props = {
     id: string;
