@@ -71,6 +71,11 @@ export const Layout: FC = ({children}) => {
             </a>
           </div>
         </div>
+        <div className="footer-copyright">
+          &copy; <a href="https://rafail01.github.io/My-portofolio/" target="_blank" rel="noopener noreferrer">
+            Ntymenos Rafail
+          </a>
+        </div>
       </section>
       </body>
       </html>
